@@ -12,14 +12,7 @@ Route::get('/', function () {
         'projects' => Project::where('status', 1)->limit(6)->latest()->get(),
         'profile' => Profile::first(),
     ];
-    return view('index', $data);
-});
-Route::get('/home', function () {
-    $data = [
-        'projects' => Project::where('status', 1)->limit(6)->latest()->get(),
-        'profile' => Profile::first(),
-    ];
-    return view('home', $data);
+    return view('pages.index', $data);
 });
 
 Route::get('/download-cv', function () {

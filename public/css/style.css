@@ -24,7 +24,7 @@ body {
 
 .card-hover:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 128, 128, 0.3);
 }
 
 .skill-bar {

@@ -13,7 +13,14 @@ Route::get('/', function () {
         'profile' => Profile::first(),
     ];
     return view('pages.index', $data);
-});
+})->name('index');
+Route::get('/projects', function () {
+    $data = [
+        'projects' => Project::where('status', 1)->get(),
+        'profile' => Profile::first(),
+    ];
+    return view('pages.projects', $data);
+})->name('all-project');
 
 Route::get('/download-cv', function () {
     $filePath = public_path('cv.pdf'); // Path to your CV file

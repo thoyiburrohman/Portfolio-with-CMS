@@ -19,12 +19,18 @@
             <!-- Desktop menu -->
             <div class="hidden md:block">
                 <div class="ml-10 flex items-center space-x-4">
-                    <a href="#home" class="nav-link text-slate-300 hover:text-white px-3 py-2 active-nav">Home</a>
-                    <a href="#about" class="nav-link text-slate-300 hover:text-white px-3 py-2">About</a>
-                    <a href="#skills" class="nav-link text-slate-300 hover:text-white px-3 py-2">Skills</a>
-                    <a href="#projects" class="nav-link text-slate-300 hover:text-white px-3 py-2">Projects</a>
-                    <a href="#contact" class="nav-link text-slate-300 hover:text-white px-3 py-2">Contact</a>
-                    <a href="#contact"
+                    <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#home"
+                        class="nav-link text-slate-300 hover:text-white px-3 py-2 active-nav">Home</a>
+                    <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#about"
+                        class="nav-link text-slate-300 hover:text-white px-3 py-2">About
+                    </a>
+                    <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#skills"
+                        class="nav-link text-slate-300 hover:text-white px-3 py-2">Skills</a>
+                    <a href="{{ Route::currentRouteName('') !== 'index' && Route::currentRouteName('') === 'all-project' ? route('all-project') : '#projects' }}"
+                        class="nav-link text-slate-300 hover:text-white px-3 py-2">Projects</a>
+                    <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#contact"
+                        class="nav-link text-slate-300 hover:text-white px-3 py-2">Contact</a>
+                    <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#contact"
                         class="ml-4 px-6 py-2 rounded-full bg-teal-500 text-white font-medium hover:bg-teal-700 transition-all duration-300">
                         Hire Me
                     </a>
@@ -36,13 +42,17 @@
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden hidden bg-slate-900">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="#home" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">Home</a>
-            <a href="#about" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">About</a>
-            <a href="#skills" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">Skills</a>
-            <a href="#projects"
+            <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#home"
+                class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">Home</a>
+            <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#about"
+                class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">About</a>
+            <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#skills"
+                class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">Skills</a>
+            <a href="{{ Route::currentRouteName('') !== 'index' && Route::currentRouteName('') === 'all-project' ? route('all-project') : '#projects' }}"
                 class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">Projects</a>
-            <a href="#contact" class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">Contact</a>
-            <a href="#contact"
+            <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#contact"
+                class="block px-3 py-2 text-base font-medium text-slate-300 hover:text-white">Contact</a>
+            <a href="{{ Route::currentRouteName('') !== 'index' ? route('index') : '' }}#contact"
                 class="block w-full text-center mt-2 px-6 py-2 rounded-full bg-teal-500 text-white font-medium hover:bg-teal-700 transition-all duration-300">
                 Hire Me
             </a>

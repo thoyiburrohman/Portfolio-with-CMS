@@ -258,7 +258,7 @@
                             <div class="absolute bottom-4 left-4">
                                 @foreach ($item->tech as $value)
                                     <span
-                                        class="inline-block px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded-full mb-2">{{ $value }}</span>
+                                        class="inline-block px-3 py-1 text-xs font-semibold bg-teal-700 text-white rounded-full mb-2">{{ $value }}</span>
                                 @endforeach
                             </div>
                         </div>
@@ -288,13 +288,13 @@
             </div>
             @if ($projects->count() > 6)
                 <div class="text-center mt-12">
-                    <a href="#"
+                    <a href="{{ route('all-project') }}"
                         class="inline-flex items-center px-8 py-3 rounded-full bg-teal-500 text-white font-medium hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                         View All Projects <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
+            @endif
         </div>
-        @endif
     </section>
 
     <!-- Contact Section -->

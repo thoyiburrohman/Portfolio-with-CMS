@@ -286,11 +286,11 @@
                 @endforeach
 
             </div>
-            @if ($projects->count() > 6)
+            @if ($project_count->count() > 6)
                 <div class="text-center mt-12">
                     <a href="{{ route('all-project') }}"
                         class="inline-flex items-center px-8 py-3 rounded-full bg-teal-500 text-white font-medium hover:bg-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                        View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                        View All Projects<i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
             @endif
